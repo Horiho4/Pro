@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Нотатник</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/блокнот.png">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="file-load">
+    <input type="file" id="loadNotesFile" accept=".txt" />
+   
+  </div>
+  
+
+
+  <div class="container">
+    <h1>Мій Нотатник</h1>
+    <div class="note-input">
+      <input type="text" id="noteTitle" placeholder="Заголовок..." />
+      <textarea id="noteText" placeholder="Текст нотатки..."></textarea>
+      <button id="addNoteBtn">Додати</button>
+    </div>
+    <ul id="noteList"></ul>
+    <button id="installNotesBtn">📝 Встановити нотатки в TXT</button>
+    <button id="saveNotes">Завантажити нотатки з файлу</button>
+   
+  </div>
+
+
+
+<div class="containe2">
+  <button id="themeToggle" style="position: fixed; top: 65px; right: 349px; z-index: 1007;">🌙 Темна тема</button>
+</div> 
+
+
+
+
+  <div id="editModal" style="display:none; position:fixed; top:50%; left:50%; transform: translate(-50%, -50%);
+  background: #fff; border: 1px solid #333; padding: 20px; z-index: 1000; width: 400px; box-shadow: 0 0 10px #000;">
+  <h3>Редагувати нотатку</h3>
+  <input type="text" id="editTitle" style="width:100%; margin-bottom:10px;" />
+  <textarea id="editText" style="width:100%; height:150px;"></textarea>
+  <div style="text-align:right; margin-top:10px;">
+    <button id="editSaveBtn">Зберегти</button>
+    <button id="editCancelBtn">Відміна</button>
+  </div>
+</div>
+
+<div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+  background: rgba(0,0,0,0.5); z-index: 999;"></div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
